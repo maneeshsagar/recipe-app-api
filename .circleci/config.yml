@@ -19,7 +19,7 @@ jobs:
           name: Running tests
           command: |
          
-            python3 manage.py test
+            docker-compose run app sh -c "python manage.py test"
       - store_artifacts:
           path: test-reports/
           destination: python_app
